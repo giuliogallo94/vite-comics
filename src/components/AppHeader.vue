@@ -79,18 +79,18 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use "../style/partials/mixins" as *;
+@use "../style/partials/mixin" as *;
 @use "../style/partials/variables" as *;
 
 header {
   .inner {
-    @include flex();
+    @include flex(center, center, row);
   }
 }
 
 nav {
   ul {
-    @include flex();
+    @include flex(center, center, row);
     list-style: none;
     gap: 1.5rem;
 

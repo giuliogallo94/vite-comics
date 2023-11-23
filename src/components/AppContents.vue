@@ -17,8 +17,6 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use "../style/partials/mixins" as *;
-@use "../style/partials/variables" as *;
 .content {
   background-color: #1c1c1c;
   height: 200px;
