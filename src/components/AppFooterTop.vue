@@ -91,61 +91,56 @@ export default {
 </script>
 
 <template>
-  <footer>
-    <div class="footer-top">
-      <div class="inner">
-        <div class="row">
-          <!-- COL Left -->
-          <div class="col">
-            <div class="dc-comics">
-              <ul>
-                <h4>DC COMICS</h4>
-                <li v-for="item in dcComicsLinks">
-                  <a href="#">{{ item.title }}</a>
-                </li>
-              </ul>
-            </div>
-            <div class="shop margin-top">
-              <ul>
-                <h4>SHOP</h4>
-                <li v-for="item in shopLinks">
-                  <a href="#">{{ item.title }}</a>
-                </li>
-              </ul>
-            </div>
+  <div class="footer-top">
+    <div class="inner">
+      <div class="row">
+        <!-- COL Left -->
+        <div class="col">
+          <div class="dc-comics">
+            <ul>
+              <h4>DC COMICS</h4>
+              <li v-for="item in dcComicsLinks">
+                <a href="#">{{ item.title }}</a>
+              </li>
+            </ul>
           </div>
-          <!-- // COL Left -->
-          <!-- COL Center -->
-          <div class="col">
-            <div class="dc">
-              <ul>
-                <h4>DC</h4>
-                <li v-for="item in dcLinks">
-                  <a href="#">{{ item.title }}</a>
-                </li>
-              </ul>
-            </div>
+          <div class="shop margin-top">
+            <ul>
+              <h4>SHOP</h4>
+              <li v-for="item in shopLinks">
+                <a href="#">{{ item.title }}</a>
+              </li>
+            </ul>
           </div>
-          <!-- // COL Center -->
-          <!-- COL Right -->
-          <div class="col">
-            <div class="sites">
-              <ul>
-                <h4>SITES</h4>
-                <li v-for="item in sitesLinks">
-                  <a href="#">{{ item.title }}</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <!-- // COL Right -->
         </div>
+        <!-- // COL Left -->
+        <!-- COL Center -->
+        <div class="col">
+          <div class="dc">
+            <ul>
+              <h4>DC</h4>
+              <li v-for="item in dcLinks">
+                <a href="#">{{ item.title }}</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- // COL Center -->
+        <!-- COL Right -->
+        <div class="col">
+          <div class="sites">
+            <ul>
+              <h4>SITES</h4>
+              <li v-for="item in sitesLinks">
+                <a href="#">{{ item.title }}</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- // COL Right -->
       </div>
     </div>
-    <div class="footer-bottom">
-      <div class="inner"></div>
-    </div>
-  </footer>
+  </div>
 </template>
 
 <style lang="scss" scoped>
