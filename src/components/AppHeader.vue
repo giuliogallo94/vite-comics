@@ -59,20 +59,22 @@ export default {
 
 <template>
   <header>
-    <div class="logo">
-      <img src="../assets/img/dc-logo.png" alt="Logo DC" />
+    <div class="inner">
+      <div class="logo">
+        <img src="../assets/img/dc-logo.png" alt="Logo DC" />
+      </div>
+      <nav>
+        <ul>
+          <li
+            v-for="(link, index) in navItems"
+            :key="link.title"
+            :class="{ active: link.isActive }"
+            @click="activeLink(index)">
+            <a href="http://127.0.0.1:5173/">{{ link.title }}</a>
+          </li>
+        </ul>
+      </nav>
     </div>
-    <nav>
-      <ul>
-        <li
-          v-for="(link, index) in navItems"
-          :key="link.title"
-          :class="{ active: link.isActive }"
-          @click="activeLink(index)">
-          <a href="http://127.0.0.1:5173/">{{ link.title }}</a>
-        </li>
-      </ul>
-    </nav>
   </header>
 </template>
 
@@ -81,9 +83,9 @@ export default {
 @use "../style/partials/variables" as *;
 
 header {
-  @include flex();
-  padding: 1rem;
-  //   height: 150px;
+  .inner {
+    @include flex();
+  }
 }
 
 nav {
