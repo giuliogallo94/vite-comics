@@ -186,6 +186,7 @@ export default {
     background-image: url(../assets/img/dc-logo-bg.png);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
 
     .div {
       width: 100%;
