@@ -140,6 +140,7 @@ export default {
         <!-- // COL Right -->
       </div>
     </div>
+    <div class="logo-bg"></div>
   </div>
 </template>
 
@@ -147,30 +148,48 @@ export default {
 @use "../style/partials/mixin" as *;
 @use "../style/partials/variables" as *;
 .footer-top {
-  min-height: 500px;
+  @include flex(space-between, center, row);
   background-image: url(../assets/img/footer-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
-  padding-top: 3rem;
+  padding-right: 8rem;
 
+  .inner {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
   .row {
     @include flex(start, start, row);
 
     .col {
       margin-right: 2rem;
     }
+
+    h4 {
+      margin-bottom: 1rem;
+    }
+    li {
+      margin-top: 0.1rem;
+      list-style: none;
+      a {
+        text-decoration: none;
+        color: grey;
+        font-size: 15px;
+      }
+    }
   }
-  h4 {
-    margin-bottom: 1rem;
-  }
-  li {
-    margin-top: 0.1rem;
-    list-style: none;
-    a {
-      text-decoration: none;
-      color: grey;
-      font-size: 15px;
+
+  .logo-bg {
+    width: 700px;
+    height: 500px;
+    background-image: url(../assets/img/dc-logo-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .div {
+      width: 100%;
+      height: 100%;
     }
   }
 }
