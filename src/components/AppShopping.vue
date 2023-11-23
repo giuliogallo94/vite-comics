@@ -69,7 +69,7 @@ export default {
       .buy-img {
         margin-right: 0.5rem;
         img {
-          width: 65px;
+          //   width: 65px;
           height: 70px;
         }
       }

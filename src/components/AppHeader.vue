@@ -21,7 +21,7 @@ export default {
         },
         {
           title: "GAMES",
-          isActive: true,
+          isActive: false,
         },
         {
           title: "COLLECTIBLES",
