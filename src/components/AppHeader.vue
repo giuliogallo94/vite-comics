@@ -21,7 +21,7 @@ export default {
         },
         {
           title: "GAMES",
-          isActive: false,
+          isActive: true,
         },
         {
           title: "COLLECTIBLES",
@@ -47,8 +47,11 @@ export default {
     };
   },
   methods: {
-    activeLink: function (activeIndex) {
+    activeLink: function (i, activeIndex) {
       {
+        for (i = 0; i < this.navItems.length; i++) {
+          this.navItems[i].isActive = false;
+        }
         this.navItems[activeIndex].isActive = true;
         console.log(this.navItems[activeIndex].isActive);
       }
@@ -69,8 +72,8 @@ export default {
             v-for="(link, index) in navItems"
             :key="link.title"
             :class="{ active: link.isActive }"
-            @click="activeLink(index)">
-            <a href="http://127.0.0.1:5173/">{{ link.title }}</a>
+            @click="activeLink(index, index)">
+            <a href="#">{{ link.title }}</a>
           </li>
         </ul>
       </nav>
@@ -84,7 +87,7 @@ export default {
 
 header {
   .inner {
-    @include flex(center, center, row);
+    @include flex(space-between, center, row);
   }
 }
 
