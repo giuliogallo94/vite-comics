@@ -25,6 +25,9 @@ export default {
           :title="value.series.toUpperCase()"
           :imageName="value.thumb" />
       </div>
+      <div class="load">
+        <button>LOAD MORE</button>
+      </div>
     </div>
   </section>
 </template>
@@ -54,6 +57,19 @@ export default {
       padding-top: 2rem;
       display: flex;
       flex-wrap: wrap;
+    }
+
+    .load {
+      text-align: center;
+      padding: 2rem;
+
+      button {
+        padding: 0.6rem 3rem;
+        background-color: $mainColor;
+        border: none;
+        color: white;
+        font-weight: bold;
+      }
     }
   }
 }
