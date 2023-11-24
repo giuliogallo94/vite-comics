@@ -96,6 +96,7 @@ nav {
     @include flex(center, center, row);
     list-style: none;
     gap: 1.5rem;
+    margin: 0;
 
     li {
       line-height: 150px;

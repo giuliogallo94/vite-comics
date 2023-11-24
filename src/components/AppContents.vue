@@ -19,7 +19,7 @@ export default {
       <div class="content-title">
         <span>CURRENT SERIES</span>
       </div>
-      <div class="row">
+      <div class="ms_row">
         <AppCards
           v-for="value in cardsDcArray"
           :title="value.series.toUpperCase()"
@@ -53,7 +53,7 @@ export default {
       }
     }
 
-    .row {
+    .ms_row {
       padding-top: 2rem;
       display: flex;
       flex-wrap: wrap;

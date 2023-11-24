@@ -41,9 +41,9 @@ export default {
             <img :src="`./src/assets/img/${item.url}`" alt="" />
           </div>
           <div class="buy-title">
-            <h5>
+            <h6>
               {{ item.title }}
-            </h5>
+            </h6>
           </div>
         </div>
       </div>

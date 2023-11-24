@@ -8,14 +8,14 @@ export default {
 </script>
 
 <template>
-  <div class="card">
+  <div class="ms_card">
     <img :src="imageName" :alt="title" />
-    <h5>{{ title }}</h5>
+    <span>{{ title }}</span>
   </div>
 </template>
 
 <style lang="scss" scoped>
-.card {
+.ms_card {
   width: calc(100% / 6);
   padding: 1rem;
   img {
@@ -23,7 +23,9 @@ export default {
     height: 300px;
   }
 
-  h5 {
+  span {
+    font-size: 15px;
+    font-weight: bold;
     color: white;
   }
 }
