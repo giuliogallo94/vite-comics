@@ -1,29 +1,60 @@
 <script>
+import AppCards from "./AppCards.vue";
 export default {
+  components: {
+    AppCards,
+  },
   data() {
-    return {};
+    return {
+      cardsDcArray: series,
+    };
   },
 };
 </script>
 
 <template>
   <section class="content">
+    <div class="content-img"></div>
     <div class="inner">
-      <div class="inner-content">
-        <h2>&#8674; Content goes here &#8672;</h2>
+      <div class="content-title">
+        <span>CURRENT SERIES</span>
+      </div>
+      <div class="row">
+        <AppCards
+          v-for="value in cardsDcArray"
+          :title="value.series.toUpperCase()"
+          :imageName="value.thumb" />
       </div>
     </div>
   </section>
 </template>
 
 <style lang="scss" scoped>
+@use "../style/partials/mixin" as *;
+@use "../style/partials/variables" as *;
 .content {
   background-color: #1c1c1c;
-  height: 200px;
 
-  .inner-content {
-    line-height: 200px;
-    color: white;
+  .content-img {
+    min-height: 400px;
+    background-image: url(../assets/img/jumbotron.jpg);
+  }
+
+  .inner {
+    .content-title {
+      span {
+        background-color: $mainColor;
+        padding: 1rem;
+        color: white;
+        font-weight: bold;
+      }
+    }
+
+    .row {
+      padding-top: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+    }
   }
 }
 </style>

@@ -4,6 +4,7 @@ import AppContents from "./components/AppContents.vue";
 import AppShopping from "./components/AppShopping.vue";
 import AppFooterTop from "./components/AppFooterTop.vue";
 import AppFooterBottom from "./components/AppFooterBottom.vue";
+import AppCards from "./components/AppCards.vue";
 
 export default {
   components: {
@@ -12,6 +13,7 @@ export default {
     AppShopping,
     AppFooterTop,
     AppFooterBottom,
+    AppCards,
   },
 };
 </script>
