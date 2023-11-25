@@ -13,12 +13,12 @@ export default {
 
 <template>
   <div
-    class="modal fade"
+    class="modal fade prova"
     :id="`exampleModal${indexCard}`"
     tabindex="-1"
     aria-labelledby="exampleModalLabel"
     aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog ms_modal-dialog">
       <div class="modal-content ms_modal">
         <div class="modal-title ms_modal-title">
           <h3>{{ title }}</h3>
@@ -47,16 +47,24 @@ export default {
 <style lang="scss" scoped>
 @use "../style/partials/mixin" as *;
 @use "../style/partials/variables" as *;
+.prova {
+  width: 100vw;
+  height: 100vh;
+  padding: 5rem 7rem;
 
+  .ms_modal-dialog {
+    max-width: 100%;
+    margin: 0;
+  }
+}
 .ms_modal {
   display: flex;
   flex-direction: column;
   padding: 3rem;
   margin: 0 auto;
-  // width: ;
-  height: 80%;
-  top: 10%;
-  // left: 40%;
+  width: 100%;
+  height: 100%;
+
   background: $mainColor;
   border: 5px solid black;
   border-radius: 2rem;
