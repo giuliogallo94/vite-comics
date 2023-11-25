@@ -1,8 +1,11 @@
 <script>
 import AppCards from "./AppCards.vue";
+import AppModal from "./AppModal.vue";
+
 export default {
   components: {
     AppCards,
+    AppModal,
   },
   data() {
     return {
@@ -21,9 +24,17 @@ export default {
       </div>
       <div class="ms_row">
         <AppCards
-          v-for="value in cardsDcArray"
+          v-for="(value, index) in cardsDcArray"
           :title="value.series.toUpperCase()"
-          :imageName="value.thumb" />
+          :imageName="value.thumb"
+          :indexCard="index" />
+        <AppModal
+          v-for="(value, index) in cardsDcArray"
+          :title="value.series.toUpperCase()"
+          :imageName="value.thumb"
+          :dcType="value.type"
+          :dcPrice="value.price"
+          :indexCard="index" />
       </div>
       <div class="load">
         <button>LOAD MORE</button>

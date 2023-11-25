@@ -3,13 +3,18 @@ export default {
   props: {
     title: String,
     imageName: String,
+    indexCard: Number,
   },
 };
 </script>
 
 <template>
   <div class="ms_card">
-    <img :src="imageName" :alt="title" />
+    <img
+      :src="imageName"
+      :alt="title"
+      data-bs-toggle="modal"
+      :data-bs-target="`#exampleModal${indexCard}`" />
     <span>{{ title }}</span>
   </div>
 </template>
